@@ -1,0 +1,35 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>20 Inch Convertor</title>
+
+</head>
+
+<body>
+   <script>
+	function inToCm(inches,centi) {
+		return inches * centi
+	}
+	function inToFt(inches,feet) {
+		return inches * feet
+	}
+	function inToM(inches,metres) {
+		return inches * metres
+	}
+	function inToMili(inches,mili) {
+		return inches * mili
+	}
+   </script>
+
+	<h1>20 Inch Convertor</h1>
+	<button onclick="document.getElementById('result').innerHTML='20in' ">Inches</button>
+	<button onclick="document.getElementById('result').innerHTML=inToCm(20,2.54) + 'cm' ">Centimetres</button>
+	<button onclick="document.getElementById('result').innerHTML=inToFt(20,0.0833) + 'ft' ">Feet</button>
+	<button onclick="document.getElementById('result').innerHTML=inToM(20,0.0254) + 'm' ">Metres</button>
+	<button onclick="document.getElementById('result').innerHTML=inToMili(20,25.4) + 'mm' ">Milimetres</button>
+	<p id="result">20in</p>
+</body>
+</html>

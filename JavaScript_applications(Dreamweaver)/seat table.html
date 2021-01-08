@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Seat</title>
+</head>
+<body>
+<style>
+	td{
+        cursor:pointer;
+        background: -moz-linear-gradient(top, #ffffff, #D1E3E9);
+        background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffffff), to(#D1E3E9));
+        text-align:center;
+		height: 20px;
+		width: 20px;
+    }
+ 
+    td:hover{
+        background: -moz-linear-gradient(top, #249ee4, #057cc0);
+        background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#249ee4), to(#057cc0));
+    }
+ 
+    td:active
+    {
+        background: -moz-linear-gradient(top, #057cc0, #249ee4);
+        background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#057cc0), to(#249ee4));
+    }
+ 
+    #result{
+        font-weight:300;
+        font-size:13pt;
+    }
+	h3{
+		font-weight:bold;
+		font-size:19pt;
+	}
+	table{
+		////border-collapse: collapse;
+	}
+</style>
+	
+<script  src="http://code.jquery.com/jquery-1.9.1.min.js" ></script>     
+<script>
+    $(document).ready(function(){
+        $("#myTable td").click(function() {     
+ 
+            var column_num = parseInt( $(this).index() ) + 1;
+            var row_num = parseInt( $(this).parent().index() )+1;    
+ 
+            $("#result").html( "Row_num =" + row_num + "  ,  Column_num ="+ column_num );   
+        });
+    });
+</script>
+
+	<!--HTML: -->
+	<h3>Choose your theatre spot.</h3>
+    <div id="result"> </div>
+    <table id="myTable" border="1" style="" cellpadding="8">
+        <!--1st ROW-->
+        <tr>
+            <td></td><td></td>
+            <td></td><td></td>
+            <td></td><td></td>
+            <td></td><td></td>
+            <td></td><td></td>
+        </tr>
+ 
+        <!--2nd ROW-->
+        <tr>
+            <td></td><td></td>
+            <td></td><td></td>
+            <td></td><td></td>
+            <td></td><td></td>
+            <td></td><td></td>
+        </tr>
+ 
+        <!--3rd ROW-->
+        <tr>
+            <td></td><td></td>
+            <td></td><td></td>
+            <td></td><td></td>
+            <td></td><td></td>
+            <td></td><td></td>
+        </tr>
+ 
+        <!--4th ROW-->
+        <tr>
+            <td></td><td></td>
+            <td></td><td></td>
+            <td></td><td></td>
+            <td></td><td></td>
+            <td></td><td></td>
+        </tr>
+ 
+        <!--5th ROW-->
+        <tr>
+            <td></td><td></td>
+            <td></td><td></td>
+            <td></td><td></td>
+            <td></td><td></td>
+            <td></td><td></td>
+        </tr>
+    </table>
+</body>
+</html>

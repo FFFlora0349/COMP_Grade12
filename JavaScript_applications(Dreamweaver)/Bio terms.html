@@ -1,0 +1,55 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Hey Biology!</title>
+  <meta name="description" content="">
+  <meta name="author" content="SitePoint">
+</head>
+
+<body>
+	<style>
+		p#name {
+			font-family:Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
+			font-size: 20px;
+			padding-left: 60px;
+		}
+		#word1, #word2, #word3, #word4, #word5{
+			font-size: 17px;
+			padding-top: 0px;
+			padding-left: 30px;
+			visibility: hidden;
+		}
+		h3{
+			padding-left: 30px;
+		}
+	</style>
+	<h3>Click to review the Bio term definitions!</h3>
+	<p id="name" onclick="visibility('word1');">Fauna</p>
+	<p id="word1" >: All the animal life that exists in a particular area during a specific period of time.</p><br>
+	
+	<p id="name" onclick="visibility('word2');">Herbivore</p>
+	<p id="word2" >: Grass or plant eating organisms are called herbivores.</p><br>
+	
+	<p id="name" onclick="visibility('word3');">Invertebrate</p>
+	<p id="word3" >: Pertaining to organisms without a backbone.</p><br>
+	
+	<p id="name" onclick="visibility('word4');">Melanism</p>
+	<p id="word4" >: A condition characterized by a high level of concentration of melanin (black pigmentation) occurring in the coat, skin, or plumage of the animals.</p><br>
+	
+	<p id="name" onclick="visibility('word5');">Zooxanthellae</p>
+	<p id="word5" >: Unicellular, yellow-brown in color algae, which live in the gastrodermis of corals.</p><br>
+	
+<script>
+function visibility(id) {
+       var e = document.getElementById(id);
+       if(e.style.visibility == 'visible')
+          e.style.visibility = 'hidden';
+       else
+          e.style.visibility = 'visible';
+   }	
+	
+</script>
+</body>
+</html>

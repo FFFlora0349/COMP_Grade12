@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Logathrims</title>
+</head>
+
+<body>
+	<h3>Here's the Log calculations.</h3>
+	
+	<input type="number" placeholder="Input a number" oninput="getBaseLog(this.value)" onChange="getBaseLog(this.value)"><br><br>
+	<span id="result"></span><br><br>
+	<span id="hy" style="display: block"></span>
+	<script>
+		function getBaseLog(argu) {
+		  argu = parseFloat(argu);
+		  power = (Math.log(argu) / Math.log(2));
+		  document.getElementById("result").innerHTML = ("The log of your number, by taking log base 2, is " + power + ". \n");
+			
+		  document.getElementById("hy").innerHTML = ("That means 2 to the power of " + power + " is your input: " + argu + '. ');
+		}
+		
+	</script>
+	
+	
+</body>
+</html>

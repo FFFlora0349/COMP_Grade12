@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Times</title>
+</head>
+
+<body>
+	<h2>Times</h2>
+	<button onClick="CanadaTime()">Canada Time:</button><p id="Canada"></p>
+	<button onClick="ChinaTime()">China Time:</button><p id="China"></p>
+	
+	<script>//PROBLEM: How to add padding zeros? filling in place
+		function CanadaTime(){
+			var d = new Date();
+			document.getElementById("Canada").innerHTML = d;
+		}
+		
+		function ChinaTime(){
+			var days =["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+			var months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+			var d = new Date();//Canada
+			var e = d.getUTCHours() + 8; //China hours
+			//var i = d.getMinutes();
+			//var j = d.getSeconds();
+			var f = d.getUTCDay();//UTC day
+			var g = d.getUTCDate();//UTC date
+			
+			if ( e > 24) {
+				e -=24;//China hours modified
+				g++;//China date
+			}
+			//e = (e <= 9 ? "0" : "") + e
+			//var i = (i <= 9 ? "0" : "") + i
+			//var j = (j <= 9 ? "0" : "") + j,;//China hours minutes seconds with padding 0????????????
+		
+			document.getElementById("China").innerHTML = days[f] + " " + months[d.getMonth()] + "  " + g + "  " + d.getFullYear() + "  " + e + ":" + d.getMinutes() + ":" + d.getSeconds();
+		}
+		
+	</script>
+</body>
+</html>

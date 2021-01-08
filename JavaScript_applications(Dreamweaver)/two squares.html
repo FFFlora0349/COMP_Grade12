@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Two Squares</title>
+	<style>
+		#first, #second{
+			background-color: #79FEFF;
+			width: 240px;
+			height: 60px;
+			display: inline-block;
+		}
+		html, body {
+			width: 100%;
+			height: 100%;
+			padding: 0;
+			margin: 0;
+		}	
+		.centered-wrapper {
+			position: relative;
+			text-align: center;
+		}
+		.centered-wrapper:before {
+			content: "";
+			position: relative;
+			display: inline-block;
+			width: 0; height: 100%;
+			vertical-align: middle;
+		}
+		.centered-content {
+			display: inline-block;
+			vertical-align: middle;
+		}
+	</style>	
+</head>
+
+<body class="centered-wrapper">
+	<div class="centered-content">
+		<table>
+			<thead>
+				<td style="font-weight: 600;">Click the left one or the right one</td>
+			</thead>
+			<tr>
+				<td id="first" onClick="Left()" style="margin-left: 100px;"></td>
+				<td id="second" onclick="Right()" style="margin-left: 80px;"></td>
+			</tr>	
+		</table>
+	</div>	
+	
+	<script>
+		function Left() {
+		   //var e = document.getElementById(id);
+		   if(document.getElementById("second").style.visibility == 'visible'){
+			  document.getElementById("second").style.visibility = 'hidden';
+		   } else {
+			  document.getElementById("second").style.visibility = 'visible';
+		   }
+	   }	
+		
+		function Right() {
+		   if(document.getElementById("first").style.visibility == 'visible'){
+			  document.getElementById("first").style.visibility = 'hidden';
+		   } else {
+			  document.getElementById("first").style.visibility = 'visible';
+		   }
+	   }	
+	</script>
+</body>
+</html>

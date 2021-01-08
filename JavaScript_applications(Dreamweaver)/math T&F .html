@@ -1,0 +1,58 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>How about Some Math?</title>
+  <meta name="description" content="">
+  <meta name="author" content="SitePoint">
+</head>
+
+<body>
+	<style>
+		button {
+			padding-left: 0px;
+		}
+		p#one, p#two, p#three, p#four, p#five, p#six {
+			padding-left: 100px;
+			display: inline;
+		}
+	</style>
+	<p>Want some math?</p>
+	<p>1. f(x)=4x-13, when x = 6, f(x) = 10.</p>
+	<button onClick="document.getElementById('one').innerHTML = 10 > 10;">Click for answer</button>
+	<p id="one"></p>
+	
+	<p>2. The inequality |x + 1| < 0 has no solution.</p>
+	<button onClick="document.getElementById('two').innerHTML = 10 >= 10;">Click for answer</button>
+	<p id="two"></p>
+	
+	<p>3. The graph of the equation y = 4 has no x-intercept.</p>
+	<button onClick="document.getElementById('three').innerHTML = 10 >= 10;">Click for answer</button>
+	<p id="three"></p>
+	
+	<p>4.  The slope of the line 2x + 2y = 2 is equal to 2.</p>
+	<button onClick="document.getElementById('four').innerHTML = 10 > 10;">Click for answer</button> <!-- It's -1. -->
+	<p id="four"></p>
+	
+	<p>5. |x + 5| is always positive.</p>
+	<button onClick="document.getElementById('five').innerHTML = 10 > 10;">Click for answer</button> <!-- Not when x =-5. -->
+	<p id="five"></p>
+	
+	<p>6. The limit of (|x -3|)/(x - 3) as x approaches 3 doesn't exist.</p>
+	<button onClick="document.getElementById('six').innerHTML = 10 >= 10;">Click for answer</button>
+	<p id="six"></p>
+	
+	
+ 	<script>
+	  /*function theFalse(){
+		  document.getElementById('one').innerHTML = 10 > 10;
+	  }
+	  function theTrue(){
+		  document.getElementById("one").innerHTML = 10 >= 10;
+	  }*/
+		
+		// Implementing function for true or false???...
+	</script>
+</body>
+</html>

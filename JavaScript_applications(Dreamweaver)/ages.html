@@ -1,0 +1,29 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Ages</title>
+  <meta name="description" content="">
+  <meta name="author" content="SitePoint">
+</head>
+
+<body>
+	<p>Input your age and click the button:</p>
+
+	<input id="age" value=" " />
+
+	<button onclick="myFunction()">Try it</button>
+
+	<p id="demo"></p>
+
+	<script>
+	function myFunction() {
+	  var age, account;
+	  age = document.getElementById("age").value;
+	  account = (age < 16) ? "Sorry, you are too young":"You are old enough";
+	  document.getElementById("demo").innerHTML = account + " to have your own bank account.";
+	}
+	</script>
+</body>
+</html>

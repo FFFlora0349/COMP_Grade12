@@ -1,0 +1,100 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>True or False Quiz</title>
+
+</head>
+
+<body>
+
+<h1>True or False Quiz</h1>
+   
+    <h3>1) A Koala's Apendix is over 2 metres long.</h3>
+        <button onclick="q1T()">True!</button>
+        <button onclick="q1F()">False!</button>
+    
+    <p id="q1"></p>
+    <br>
+    
+    
+    <h3>2) Suicide is illegal in Canada.</h3>
+        <button onclick="q2T()">True!</button>
+        <button onclick="q2F()">False!</button>
+    
+    <p id="q2"></p>
+    <br>    
+    
+    
+    <h3>3) The name of Hawaii's national fish is Humuhumunukunukuapua.</h3>
+        <button onclick="q3T()">True!</button>
+        <button onclick="q3F()">False!</button>
+    
+    <p id="q3"></p>
+    <br>    
+    
+    
+    <h3>4) Hong Kong has the longest expectancy of any single city in the world.</h3>
+        <button onclick="q4T()">True!</button>
+        <button onclick="q4F()">False!</button>
+    
+    <p id="q4"></p>
+    <br>    
+    
+    
+    <h3>5) The first moon landing occured in 1969.</h3>
+        <button onclick="q5T()">True!</button>
+        <button onclick="q5F()">False!</button>
+    
+    <p id="q5"></p>
+    <br>   
+    
+    
+<script>
+//question 1
+function q1T() {
+    document.getElementById('q1').innerHTML = Boolean(1<2);
+}
+  
+function q1F() {
+    document.getElementById('q1').innerHTML = Boolean(1>2);
+}
+//queston 2
+function q2T() {
+    document.getElementById('q2').innerHTML = Boolean(1>2);
+}
+  
+function q2F() {
+    document.getElementById('q2').innerHTML = Boolean(1<2);
+}
+//question3  
+function q3T() {
+    document.getElementById('q3').innerHTML = Boolean(1<2);
+}
+  
+function q3F() {
+    document.getElementById('q3').innerHTML = Boolean(1>2);
+}
+//question 4
+function q4T() {
+    document.getElementById('q4').innerHTML = Boolean(1<2);
+}
+  
+function q4F() {
+    document.getElementById('q4').innerHTML = Boolean(1>2);
+}
+//question 5
+function q5T() {
+    document.getElementById('q5').innerHTML = Boolean(1>2);
+}
+  
+function q5F() {
+    document.getElementById('q5').innerHTML = Boolean(1<2);
+}
+        
+</script>
+
+</body>
+</html>

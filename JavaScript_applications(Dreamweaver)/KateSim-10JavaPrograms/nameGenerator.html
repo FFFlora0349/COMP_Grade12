@@ -1,0 +1,103 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Name Generator</title>
+
+</head>
+
+<body>
+
+<h1>Name Generator</h1>
+    
+<h3>Male Names</h3>
+<button onclick="boy()">Generate!</button>
+<p id="resultB"></p>  
+
+<h3>Female Names</h3>
+<button onclick="girl()">Generate!</button>
+<p id="resultG"></p> 
+    
+<script>
+
+function boy() {
+ var pickB = Math.floor(Math.random() * 101);
+
+ if (pickB >= 0 && pickB <= 10) {
+     resuB = "George";
+ }
+     if (pickB > 10 && pickB <= 20) {
+     resuB = "John";
+ }
+     if (pickB > 20 && pickB <= 30) {
+     resuB = "Jim";
+ }
+     if (pickB > 30 && pickB <= 40) {
+     resuB = "Sebastian";
+ }
+     if (pickB > 40 && pickB <= 50) {
+     resuB = "Maxwell";
+ }
+     if (pickB > 50 && pickB <= 60) {
+     resuB = "Matthew";
+ }
+     if (pickB > 60 && pickB <= 70) {
+     resuB = "Jerry";
+ }
+     if (pickB > 70 && pickB <= 80) {
+     resuB = "Ryan";
+ }
+     if (pickB > 80 && pickB <= 90) {
+     resuB = "Bradley";
+ }
+     if (pickB > 90 && pickB <= 100) {
+     resuB = "Tyler";
+ }
+
+    document.getElementById("resultB").innerHTML = resuB;
+    }
+    
+function girl() {
+ var pickG = Math.floor(Math.random() * 101);
+
+ if (pickG >= 0 && pickG <= 10) {
+     resuG = "Angela";
+ }
+     if (pickG > 10 && pickG <= 20) {
+     resuG = "Annie";
+ }
+     if (pickG > 20 && pickG <= 30) {
+     resuG = "Jasmine";
+ }
+     if (pickG > 30 && pickG <= 40) {
+     resuG = "Sarah";
+ }
+     if (pickG > 40 && pickG <= 50) {
+     resuG = "Mary";
+ }
+     if (pickG > 50 && pickG <= 60) {
+     resuG = "Christine";
+ }
+     if (pickG > 60 && pickG <= 70) {
+     resuG = "Jade";
+ }
+     if (pickG > 70 && pickG <= 80) {
+     resuG = "Elaine";
+ }
+     if (pickG > 80 && pickG <= 90) {
+     resuG = "Hilary";
+ }
+     if (pickG > 90 && pickG <= 100) {
+     resuG = "Mei";
+ }
+
+    document.getElementById("resultG").innerHTML = resuG;
+    }
+    
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Greetings</title>
+
+</head>
+
+<body>
+<h1>Compound Interest Calculator</h1>
+<input id="oriCost" placeholder="Cost of Item">
+<input id="numComp" placeholder="Times Compounded per Year">
+<input id="yrs" placeholder="Years Until Paid Off">
+<input id="rate" placeholder="Interest Rate" >
+<div id="result">
+</div>
+    
+<button id="calculate">Calculate</button>
+ 
+<div id="totalTip">
+    $<span id="result">0.00</span>
+</div>
+    
+    
+<script>
+    
+function calc() {
+    var oriCost = document.getElementById("oriCost").value;
+    var numComp = document.getElementById("numComp").value;
+    var yrs = document.getElementById("yrs").value;
+    var rate = document.getElementById("rate").value;
+    
+    if (oriCost == 0 || numComp == 0 || yrs == 0 || rate == 0) {
+    alert("Please enter values");
+    return;
+  }
+    
+var total = (oriCost * (1 + (rate/numComp)) ** (numComp*yrs))
+total = Math.round(total * 100) / 100;
+total = total.toFixed(2);
+document.getElementById("totalTip").style.display = "none";
+document.getElementById("result").innerHTML = total;
+}
+    
+document.getElementById("calculate").onclick = function() {
+  calc();
+}
+    
+</script>
+
+
+</body>
+</html>

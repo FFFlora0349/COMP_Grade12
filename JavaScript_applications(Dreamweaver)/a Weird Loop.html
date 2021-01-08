@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>For Loop</title>
+</head>
+
+<body>
+	<style>
+		p, input{
+			margin-left: 60px;
+		}
+		#tt{
+			font-weight:500;
+		}
+	</style>
+	<p id="tt">A Weird Loop</p>
+	<p>Please input a word(Less than 10 characters is better).</p>
+	<input type="text" placeholder="Input a word." id="inp">
+	<button onClick="forFunction()">OK</button>
+	<p id="result"></p>
+	
+	
+<script>
+		function forFunction(a){
+			var w = document.getElementById("inp").value;
+			var a = "";
+			
+			var i, j;
+			for (i = 0; i < w.length; i++) {
+				a += "<br><br>" + w[i] + "<br>";
+				for (j = 0; j < w.length; j++){
+					a += w[j];//would be vertical if a += w[j] + "<br>";
+				}
+			}//python big loop circulate once, small loop executes all codes.
+			document.getElementById("result").innerHTML = a;	
+			
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>the 3 Temperature</title>
+  <meta name="description" content="">
+  <meta name="author" content="SitePoint">
+</head>
+
+<body>
+  <p>
+  <label>Fahrenheit</label>
+  <input id="inputFahrenheit" id="outputFahrenheit" type="number" placeholder="Fahrenheit" onclick="F_focused()" oninput="FtoC_covertTemp(this.value)" onchange="FtoC_covertTemp(this.value)">
+</p>
+	
+<p>
+  <label>Celcius</label>
+  <input id="inputCelcius" id="outputCelcius" type="number" placeholder="Celcius" onclick="C_focused()" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
+</p>
+
+<p>
+  <label>Kelvin</label>
+  <input id="inputKelvin" id="outputKelvin" type="number" placeholder="Kelvin" onclick="K_focused()" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
+</p>
+	
+<script>
+document.getElementById("inputFahrenheit").addEventListener("onfocus", F_focused());
+document.getElementById("inputCelcius").addEventListener("onfocus", C_focused());
+document.getElementById("inputKelvin").addEventListener("onfocus", K_focused());
+	
+function F_focused() {
+	function FtoC_covertTemp(valNum) {//F to C
+	  valNum = parseFloat(valNum);
+	  document.getElementById("outputCelcius").innerHTML=(valNum-32)/1.8;
+	}
+	
+	function FtoK_covertTemp(valNum) {//F to K
+	  valNum = parseFloat(valNum);
+	  document.getElementById("outputKelvin").innerHTML=((valNum-32)/1.8)+273.15;
+	}		
+} 	
+
+function K_focused() {
+	function KtoF_covertTemp(valNum) {//K to F
+	  valNum = parseFloat(valNum);
+	  document.getElementById("outputFahrenheit").innerHTML=((valNum-273.15)*1.8)+32;
+	}
+	
+	function KtoC_covertTemp(valNum) {//K to C
+	  valNum = parseFloat(valNum);
+	  document.getElementById("outputCelcius").innerHTML=valNum-273.15;
+	}
+}
+
+function C_focused() {
+	function CtoK_covertTemp(valNum) {//C to K
+	  valNum = parseFloat(valNum);
+	  document.getElementById("outputKelvin").innerHTML=valNum+273.15;
+	}
+	
+	function CtoF_covertTemp(valNum) {//C to F
+	  valNum = parseFloat(valNum);
+	  document.getElementById("outputFahrenheit").innerHTML=(valNum*1.8)+32;
+	}	
+}
+
+	
+	
+	
+	
+	
+	
+	
+</script>
+</body>
+</html>
